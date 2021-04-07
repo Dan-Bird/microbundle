@@ -20,6 +20,7 @@ import typescript from 'rollup-plugin-typescript2';
 import json from '@rollup/plugin-json';
 import svgr from '@svgr/rollup';
 import smartAsset from 'rollup-plugin-smart-asset';
+import copy from 'rollup-plugin-copy';
 import logError from './log-error';
 import { readFile, isDir, isFile, stdout, stderr, isTruthy } from './utils';
 import camelCase from 'camelcase';
@@ -109,10 +110,6 @@ const EXTENSIONS = [
 	'.jpg',
 	'.png',
 	'.svg',
-	".eot",
-	".ttf",
-	".woff",
-	".woff2"
 ];
 
 const WATCH_OPTS = {
@@ -557,6 +554,9 @@ function createConfig(options, entry, format, writeMeta) {
 						useHash: true,
 						keepName: true,
 						keepImport: true,
+					}),
+					copy({
+						targets: [{ src: 'assets/*', dest: 'dist/assets' }],
 					}),
 					svgr(),
 					{
