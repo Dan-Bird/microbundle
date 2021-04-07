@@ -109,6 +109,10 @@ const EXTENSIONS = [
 	'.jpg',
 	'.png',
 	'.svg',
+	".eot",
+	".ttf",
+	".woff",
+	".woff2"
 ];
 
 const WATCH_OPTS = {
