@@ -124,7 +124,7 @@
 		"prettier": "^1.19.1",
 		"regenerator-runtime": "^0.13.3",
 		"rimraf": "^3.0.2",
-		"rollup-plugin-copy": "^3.4.0",
+		"rollup-plugin-copy-assets": "^2.0.3",
 		"shell-quote": "^1.6.1",
 		"strip-ansi": "^6.0.0",
 		"travis-size-report": "^1.1.0"
