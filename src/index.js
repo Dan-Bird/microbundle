@@ -556,7 +556,7 @@ function createConfig(options, entry, format, writeMeta) {
 						keepImport: true,
 					}),
 					copy({
-						assets: [resolve(options.cwd, 'src/assets')],
+						assets: ['src/assets'],
 					}),
 					svgr(),
 					{
